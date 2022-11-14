@@ -1,0 +1,21 @@
+<section class="mx-lg-5">
+    <table class="table my-5">
+        <thead>
+            <tr>
+                <th scope="col">Country</th>
+                <th scope="col">Capital</th>
+                <th scope="col">Flag</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let country of arrCountries">
+                <td>{{country?.name.common}}</td>
+                <td>{{country?.capital}}</td>
+                <td>
+                    <img *ngIf="country?.flag.flags && country?.flag.flags.png" [src]="country?.flag.flags.png"
+                        [alt]="country?.flag.flags.png" width="20" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
